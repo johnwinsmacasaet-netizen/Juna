@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/noteLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".journal">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:contentDescription="Back"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Notes"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:hint="Title"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:hintTextColor="#888888"
+        android:padding="16dp"
+        android:background="@android:color/transparent"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editNote"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/editTitle"
+        android:layout_above="@+id/bottomBar"
+        android:hint="Note something down"
+        android:textColor="@android:color/black"
+        android:hintTextColor="#888888"
+        android:gravity="top"
+        android:padding="16dp"
+        android:background="@android:color/transparent"
+        android:inputType="textMultiLine" />
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:weightSum="6">
+
+        <ImageButton
+            android:id="@+id/locationButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_format_bold_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:text="Bold" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_format_italic_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Italic" />
+
+        <ImageButton
+            android:id="@+id/voiceButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_mic_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Voice" />
+
+        <ImageButton
+            android:id="@+id/textFormatButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_text_format_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Text Format" />
+
+        <ImageButton
+            android:id="@+id/checklistButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_format_list_bulleted_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Checklist" />
+
+        <ImageButton
+            android:id="@+id/reminderButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_image_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Reminder" />
+    </LinearLayout>
+</RelativeLayout>

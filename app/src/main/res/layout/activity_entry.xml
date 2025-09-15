@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="0dp"
+    android:background="@drawable/bg_color_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:padding="25dp"
+            android:text="Add entry"
+            android:textColor="#2e2e2e"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a date"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Date Picker Input with Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="10/9/2025"
+                android:textColor="#2e2e2e"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/btnDatePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="Select date"
+                android:src="@android:drawable/ic_menu_my_calendar" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="#2e2e2e"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@null"
+            android:hint="Trip to Skagen"
+            android:padding="10dp"
+            android:textColor="#2E2E2E" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E7865E"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Place Input -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Place"
+            android:textColor="#2E2E2E"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Skagen"
+            android:padding="10dp"
+            android:background="@null"
+            android:textColor="#2E2E2E"
+            android:layout_marginBottom="16dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E7865E"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Weather -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weather"
+            android:textStyle="bold"
+            android:textColor="#2E2E2E"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Weather Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:gravity="start"
+            android:wrapBefore="true"
+            android:paddingBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:weightSum="3"
+            android:layout_marginStart="4dp">
+
+            <Button
+                android:id="@+id/btnSunny"
+                style="@style/ChipButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunny"
+                android:textSize="9dp"
+                android:background="@drawable/weather_button_bg_selected"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnWindy"
+                style="@style/ChipButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Windy"
+                android:textSize="9dp"
+                android:background="@drawable/weather_button_bg"
+                android:textColor="#333333"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnOvercast"
+                style="@style/ChipButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/weather_button_bg_selected"
+                android:text="Overcast"
+                android:textSize="9dp"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <Button
+                android:id="@+id/btnRainShowers"
+                style="@style/ChipButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/weather_button_bg"
+                android:text="Rain showers"
+                android:textSize="9dp"
+                android:textColor="#333333" />
+
+            <Button
+                android:id="@+id/btnThunderstorm"
+                style="@style/ChipButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/weather_button_bg"
+                android:text="Thunderstorm"
+                android:textSize="9dp"
+                android:textColor="#333333" />
+
+            <Button
+                android:id="@+id/btnRainy"
+                style="@style/ChipButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/weather_button_bg"
+                android:text="Rainy"
+                android:textSize="9dp"
+                android:textColor="#333333" />
+
+            <Button
+                android:id="@+id/btnSnow"
+                style="@style/ChipButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/weather_button_bg"
+                android:text="Snow"
+                android:textSize="9dp"
+                android:textColor="#333333" />
+        </LinearLayout>
+
+        <!-- Note -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#2E2E2E"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@null"
+            android:hint="Trip"
+            android:padding="10dp"
+            android:textColor="#2E2E2E"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E7865E"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add task for a day"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#2E2E2E"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:background="@null"
+            android:textColor="#2E2E2E"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E7865E"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Write about your day"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#2E2E2E"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvJournalNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/note_background"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:padding="16dp"
+            android:text="blablbaldbablabalbaablablbalabblaawadhiawna aiwdanwdoiawdbnawodi oawdaw hatdog antonio jose aurelio, ajegil espiritu, jarrees, for the win, shine prince, plato"
+            android:layout_marginBottom="24dp"
+            android:lineSpacingExtra="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload pictures"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#2E2E2E"
+            android:layout_marginBottom="8dp" />
+
+        <GridLayout
+            android:id="@+id/gridImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:layout_marginBottom="28dp"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagesample1"
+                android:background="@drawable/rounded_image_background" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagesample2"
+                android:background="@drawable/rounded_image_background" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagesample2"
+                android:background="@drawable/rounded_image_background" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagesample2"
+                android:background="@drawable/rounded_image_background" />
+
+            <ImageButton
+                android:id="@+id/btnAddImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/add_image_background"
+                android:src="@android:drawable/ic_input_add"
+                android:scaleType="center"
+                android:contentDescription="Add image" />
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btnSaveEntry"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Save entry"
+            android:textColor="#2E2E2E"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_button_background"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp" />
+
+    </LinearLayout>
+</ScrollView>

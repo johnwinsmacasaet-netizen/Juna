@@ -138,7 +138,7 @@
 
             <Button
                 android:id="@+id/btnSunny"
-                style="@style/ChipButton"
+                android:style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sunny"
@@ -149,7 +149,7 @@
 
             <Button
                 android:id="@+id/btnWindy"
-                style="@style/ChipButton"
+                android:style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Windy"
@@ -160,7 +160,7 @@
 
             <Button
                 android:id="@+id/btnOvercast"
-                style="@style/ChipButton"
+                android:style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -183,7 +183,7 @@
 
             <Button
                 android:id="@+id/btnRainShowers"
-                style="@style/ChipButton"
+                android:style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -194,7 +194,7 @@
 
             <Button
                 android:id="@+id/btnThunderstorm"
-                style="@style/ChipButton"
+                android:style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -205,7 +205,7 @@
 
             <Button
                 android:id="@+id/btnRainy"
-                style="@style/ChipButton"
+                android:style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -216,7 +216,7 @@
 
             <Button
                 android:id="@+id/btnSnow"
-                style="@style/ChipButton"
+                android:style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/weather_button_bg"
@@ -291,7 +291,7 @@
             android:id="@+id/tvJournalNote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/note_background"
+            android:background="@drawable/bote_background"
             android:textColor="#FFFFFF"
             android:textSize="14sp"
             android:padding="16dp"
@@ -323,28 +323,28 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/imagesample1"
+                android:src="@drawable/mermaid_scene"
                 android:background="@drawable/rounded_image_background" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/imagesample2"
+                android:src="@drawable/moon"
                 android:background="@drawable/rounded_image_background" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/imagesample2"
+                android:src="@drawable/tree"
                 android:background="@drawable/rounded_image_background" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/imagesample2"
+                android:src="@drawable/moon"
                 android:background="@drawable/rounded_image_background" />
 
             <ImageButton

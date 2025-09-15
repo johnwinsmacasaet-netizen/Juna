@@ -94,6 +94,15 @@
                 android:textAlignment="center"
                 android:text="hana_th@gmail.com" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginEnd="120dp"
+                android:text="Update Profile"
+                android:textStyle="bold"
+                android:backgroundTint="@color/blue_dark"/>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_marginStart="32dp"

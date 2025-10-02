@@ -103,7 +103,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:srcCompat="@drawable/arc_2"
-                    tools:layout_editor_absoluteY="-57dp" />
+                    tools:layout_editor_absoluteY="-57dp"
+                    tools:ignore="MissingConstraints" />
 
                 <LinearLayout
                     android:id="@+id/linearLayout"
@@ -135,7 +136,7 @@
                                 android:background="@drawable/background_oval2">
 
                                 <ImageView
-                                    android:id="@+id/imageView14"
+                                    android:id="@+id/imageView1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -146,7 +147,7 @@
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
                             <TextView
-                                android:id="@+id/textView4"
+                                android:id="@+id/textView5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Reminders"
@@ -277,7 +278,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
-                    tools:srcCompat="@drawable/bottom_btn1" />
+                    app:srcCompat="@drawable/bottom_btn1" />
 
                 <TextView
                     android:id="@+id/textView12"
@@ -299,7 +300,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
-                    tools:srcCompat="@drawable/ic_baseline_analytics_24" />
+                    app:srcCompat="@drawable/ic_baseline_analytics_24" />
 
                 <TextView
                     android:id="@+id/textView14"
@@ -331,7 +332,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
-                    tools:srcCompat="@drawable/ic_baseline_supervised_user_circle_24" />
+                    app:srcCompat="@drawable/ic_baseline_supervised_user_circle_24" />
 
                 <TextView
                     android:id="@+id/textView18"
@@ -353,7 +354,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
-                    tools:srcCompat="@drawable/bottom_btn4" />
+                    app:srcCompat="@drawable/bottom_btn4" />
 
                 <TextView
                     android:id="@+id/textView"

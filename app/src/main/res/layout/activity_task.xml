@@ -31,7 +31,7 @@
         android:layout_below="@id/topAppBar"
         android:id="@+id/taskRecyclervView"
         android:layout_marginTop="32dp"
-        app:layouManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:nestedScrollingEnabled="true"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

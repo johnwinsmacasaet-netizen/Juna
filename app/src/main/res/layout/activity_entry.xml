@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true"
     android:padding="0dp"
     android:background="@drawable/bg_color_gradient">
@@ -132,7 +133,6 @@
             android:orientation="horizontal"
             android:layout_marginBottom="16dp"
             android:gravity="start"
-            android:wrapBefore="true"
             android:paddingBottom="8dp"
             android:layout_marginTop="8dp"
             android:weightSum="3"
@@ -140,7 +140,7 @@
 
             <Button
                 android:id="@+id/btnSunny"
-                android:style="@style/ChipButton"
+                style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sunny"
@@ -151,7 +151,7 @@
 
             <Button
                 android:id="@+id/btnWindy"
-                android:style="@style/ChipButton"
+                style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Windy"
@@ -162,7 +162,7 @@
 
             <Button
                 android:id="@+id/btnOvercast"
-                android:style="@style/ChipButton"
+                style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -185,7 +185,7 @@
 
             <Button
                 android:id="@+id/btnRainShowers"
-                android:style="@style/ChipButton"
+                style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -196,7 +196,7 @@
 
             <Button
                 android:id="@+id/btnThunderstorm"
-                android:style="@style/ChipButton"
+                style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -207,7 +207,7 @@
 
             <Button
                 android:id="@+id/btnRainy"
-                android:style="@style/ChipButton"
+                style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -218,7 +218,7 @@
 
             <Button
                 android:id="@+id/btnSnow"
-                android:style="@style/ChipButton"
+                style="@style/ChipButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/weather_button_bg"

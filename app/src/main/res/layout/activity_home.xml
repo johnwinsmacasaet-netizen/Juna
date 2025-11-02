@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:text="My Morning Refelection"
+                    android:text=" My Morning Reflection"
                     android:textColor="@color/white"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -117,6 +117,7 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/reminderCard"
                         android:layout_width="100dp"
                         android:layout_height="120dp"
                         android:layout_margin="10dp"
@@ -236,8 +237,10 @@
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewJournal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
                         android:clipToPadding="false"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp" />
@@ -268,6 +271,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/homebutton"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
@@ -290,6 +294,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/analysisbutton"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
@@ -344,6 +349,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/settingbutton"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"

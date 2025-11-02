@@ -3,8 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -93,9 +95,14 @@
         <activity
             android:name=".Profile"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+        </activity>
+        <activity
+            android:name=".Journal_Homepage"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".ReminderActivity"
+            android:exported="false">
         </activity>
         <activity
             android:name=".MainActivity"

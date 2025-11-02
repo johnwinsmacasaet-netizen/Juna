@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "850317722215",
+    "firebase_url": "https://journal-da5a0-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "journal-da5a0",
+    "storage_bucket": "journal-da5a0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850317722215:android:77d152840e758fd7e30ac2",
+        "android_client_info": {
+          "package_name": "com.example.journal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzp7Zpw124vRESLkQ2I_PFRCdMoV96sl4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

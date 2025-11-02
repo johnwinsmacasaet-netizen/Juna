@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/edittext_background"
+    android:layout_margin="8dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/journalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sample Title"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/blue_dark" />
+
+    <!-- Mood with Emoji -->
+    <TextView
+        android:id="@+id/journalMood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mood: Happy 😊"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Note Preview -->
+    <TextView
+        android:id="@+id/journalNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is a short preview..."
+        android:textSize="14sp"
+        android:textColor="@android:color/black"/>
+</LinearLayout>

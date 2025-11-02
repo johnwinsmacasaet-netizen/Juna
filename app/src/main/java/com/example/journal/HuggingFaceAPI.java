@@ -18,7 +18,7 @@ import okhttp3.Response;
 public class HuggingFaceAPI {
     private static final String TAG = "HuggingFaceAPI";
     private static final String API_URL =
-            "https://api-inference.huggingface.co/models/j-hartmann/emotion-english-distilroberta-base";
+            "https://router.huggingface.co/hf-inference/models/j-hartmann/emotion-english-distilroberta-base";
 
     private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
 

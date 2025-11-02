@@ -1,7 +1,20 @@
+
+
 plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
 }
+
+
+def localProperties = new Properties()
+def localFile = rootProject.file("local.properties")
+if (localFile.exists()) {
+    localFile.withInputStream { stream ->
+        localProperties.load(stream)
+    }
+}
+def HF_TOKEN = localProperties.getProperty("HF_TOKEN")
+
 
 android {
     namespace 'com.example.journal'
@@ -15,6 +28,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "HF_TOKEN", "\"${HF_TOKEN}\""
     }
 
     buildTypes {

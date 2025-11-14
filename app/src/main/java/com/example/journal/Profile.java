@@ -2,16 +2,27 @@ package com.example.journal;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Switch;
 import android.widget.Toast;
 
 public class Profile extends AppCompatActivity {
+
+
+
+    Switch switcher;
+    boolean nightMODE;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     androidx.constraintlayout.widget.ConstraintLayout notif, calendar, gallery, journal, share, logout;
     androidx.constraintlayout.widget.ConstraintLayout constraintLayout;
@@ -23,13 +34,27 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        getSupportActionBar().hide();
+
         constraintLayout = findViewById(R.id.constraintLayout1);
+
+        switcher = findViewById(R.id.mode);
         notif = findViewById(R.id.notif);
         calendar = findViewById(R.id.calendar);
         gallery = findViewById(R.id.gallery);
         journal = findViewById(R.id.journal);
         share = findViewById(R.id.share);
         logout = findViewById(R.id.logout);
+
+
+
+    sharedPreferences = getSharedPreferences("MODE", Context.MODE_PRIVATE);
+        nightMODE = sharedPreferences.getBoolean("night", false);
+
+        if (nightMODE){
+            switcher.setChecked(true);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
 
 
         constraintLayout.setOnClickListener(new View.OnClickListener() {
@@ -108,6 +133,22 @@ public class Profile extends AppCompatActivity {
                     }
                 });
                 alert_dialog.show();
+            }
+        });
+
+        switcher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (nightMODE){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("night", false);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("night", true);
+                }
             }
         });
 

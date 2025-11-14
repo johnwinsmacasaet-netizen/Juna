@@ -236,6 +236,7 @@
                             android:textStyle="bold" />
                     </LinearLayout>
 
+
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerViewJournal"
                         android:layout_width="match_parent"
@@ -294,7 +295,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/analysisbutton"
+                android:id="@+id/loggbutton"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
@@ -305,14 +306,14 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_baseline_analytics_24" />
+                    app:srcCompat="@drawable/ic_baselinelog_24" />
 
                 <TextView
                     android:id="@+id/textView14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Analysis"
+                    android:text="Log"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -337,14 +338,14 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_baseline_supervised_user_circle_24" />
+                    app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
                 <TextView
                     android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Social"
+                    android:text="Profile"
                     android:textAlignment="center" />
             </LinearLayout>
 

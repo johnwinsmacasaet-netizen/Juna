@@ -29,7 +29,7 @@ public class home extends AppCompatActivity {
 
     ImageView imageView8;
     TextView textView2;
-    LinearLayout homebutton, analysisbutton, cartBtn, settingbutton;
+    LinearLayout homebutton, loggbutton, cartBtn, settingbutton;
 
     RecyclerView recyclerView;
     JournalAdapter adapter;
@@ -48,26 +48,26 @@ public class home extends AppCompatActivity {
         imageView8 = findViewById(R.id.imageView8);
         textView2 = findViewById(R.id.textView2);
         homebutton = findViewById(R.id.homebutton);
-        analysisbutton = findViewById(R.id.analysisbutton);
+        loggbutton = findViewById(R.id.loggbutton);
         cartBtn = findViewById(R.id.cartBtn);
         settingbutton = findViewById(R.id.settingbutton);
 
-        imageView8.setOnClickListener(v -> {
-            Intent intent = new Intent(home.this, Profile.class);
+       /* imageView8.setOnClickListener(v -> {
+            Intent intent = new Intent(home.this, .class);
             startActivity(intent);
-        });
+        });*/
 
-        textView2.setOnClickListener(v -> {
+        /*textView2.setOnClickListener(v -> {
             Intent intent = new Intent(home.this, Profile.class);
             startActivity(intent);
-        });
+        });*/
 
         homebutton.setOnClickListener(v -> {
             Intent intent = new Intent(home.this, home.class);
             startActivity(intent);
         });
 
-        analysisbutton.setOnClickListener(v -> {
+        loggbutton.setOnClickListener(v -> {
             Intent intent = new Intent(home.this, tracker.class);
             startActivity(intent);
         });

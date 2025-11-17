@@ -2,4 +2,11 @@
 <resources>
 
     <style name="ChipButton"></style>
+    <style name="FormatButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:tint">@color/blue_dark</item>
+    </style>
 </resources>

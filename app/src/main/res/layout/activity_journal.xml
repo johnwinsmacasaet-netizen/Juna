@@ -2,131 +2,132 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/noteLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@drawable/bg_gradient_journal"
     tools:context=".journal">
-
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="?attr/colorPrimary"
-        android:title="To-Do List"
-        android:subtitle="Manage your tasks here"
-        android:elevation="4dp"
+        android:layout_height="56dp"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
         app:titleCentered="true"
+        app:title="Journal"
+        app:titleTextColor="@android:color/white"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Journal"
-            android:textColor="@color/blue_dark"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
         <Button
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:backgroundTint="@color/blue_dark"
-            android:textColor="@android:color/white"
+            android:layout_height="32dp"
+            android:text="Save"
+            android:textSize="12sp"
+            android:paddingHorizontal="18dp"
             android:textStyle="bold"
-            android:layout_gravity="end"/>
+            android:background="@drawable/bg_submit_button"
+            android:textColor="@android:color/white"
+            android:layout_gravity="end"
+            android:elevation="0dp" />
+
     </com.google.android.material.appbar.MaterialToolbar>
 
+    <!-- TITLE INPUT -->
     <EditText
         android:id="@+id/editTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/topAppBar"
         android:hint="Title"
-        android:textColor="@android:color/black"
         android:textSize="20sp"
-        android:textColorHint="#888888"
-        android:padding="16dp"
-        android:background="@android:color/transparent"
+        android:textColor="@android:color/black"
+        android:textColorHint="#808080"
+        android:background="@drawable/bg_input_card"
+        android:padding="18dp"
+        android:layout_margin="16dp"
         android:textStyle="bold" />
 
+    <!-- NOTE INPUT -->
     <EditText
         android:id="@+id/editNote"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_below="@id/editTitle"
         android:layout_above="@+id/bottomBar"
-        android:hint="Note something down"
+        android:hint="Write your thoughts..."
         android:textColor="@android:color/black"
-        android:textColorHint="#888888"
+        android:textColorHint="#808080"
         android:gravity="top"
-        android:padding="16dp"
-        android:background="@android:color/transparent"
+        android:padding="20dp"
+        android:background="@drawable/bg_input_large"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
         android:inputType="textMultiLine" />
 
-
+    <!-- FLOATING TOOLBAR -->
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="@android:color/white"
         android:gravity="center"
-        android:weightSum="6">
+        android:paddingHorizontal="10dp"
+        android:background="@android:color/transparent">
 
-        <ImageButton
-            android:id="@+id/boldbutton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_format_bold_24"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:text="Bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bottom_toolbar"
+            android:gravity="center"
+            android:elevation="8dp"
+            android:paddingHorizontal="10dp">
 
-        <ImageButton
-            android:id="@+id/italicbutton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_format_italic_24"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Italic" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/boldbutton"
+                style="@style/FormatButton"
+                android:src="@drawable/ic_baseline_format_bold_24" />
 
-        <ImageButton
-            android:id="@+id/voiceButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_mic_24"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Voice" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/italicbutton"
+                style="@style/FormatButton"
+                android:src="@drawable/ic_baseline_format_italic_24" />
 
-        <ImageButton
-            android:id="@+id/underlinebutton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_text_format_24"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Text Format" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voiceButton"
+                style="@style/FormatButton"
+                android:src="@drawable/ic_baseline_mic_24" />
 
-        <ImageButton
-            android:id="@+id/strikethrough"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_format_list_bulleted_24"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Checklist" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/underlinebutton"
+                style="@style/FormatButton"
+                android:src="@drawable/ic_baseline_text_format_24" />
 
-        <ImageButton
-            android:id="@+id/imagebutton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_image_24"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Reminder" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bulletButton"
+                style="@style/FormatButton"
+                android:src="@drawable/ic_baseline_format_list_bulleted_24" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imagebutton"
+                style="@style/FormatButton"
+                android:src="@drawable/ic_baseline_image_24" />
+
+        </LinearLayout>
+
     </LinearLayout>
+
 </RelativeLayout>
+

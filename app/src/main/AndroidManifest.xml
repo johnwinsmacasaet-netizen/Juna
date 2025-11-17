@@ -16,6 +16,20 @@
         android:theme="@style/Theme.Journal"
         tools:targetApi="31">
         <activity
+            android:name=".Activity_journal_homepage"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".journal_item"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainProfile"
             android:exported="false">
             <meta-data

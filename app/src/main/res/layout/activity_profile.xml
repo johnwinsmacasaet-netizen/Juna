@@ -3,13 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/Screen"
+    android:background="@drawable/purple_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-30dp"
+        tools:layout_editor_absoluteY="-86dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,21 +21,21 @@
             <!-- Top Header -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                style="@style/Screen"
-                android:layout_height="250dp">
+                android:layout_height="250dp"
+                android:background="@drawable/purple_background">
 
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_marginTop="40dp"
                     android:layout_marginStart="25dp"
-                    app:layout_constraintTop_toBottomOf="@id/textView1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:srcCompat="@drawable/user_1"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/background_oval3"
+                    android:padding="4dp"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/background_oval_1"
-                    android:padding="4dp"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView1"
+                    app:srcCompat="@drawable/user_1" />
 
 
                 <TextView
@@ -42,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Setting"
-                    style="@style/text"
+                    android:textColor="@color/white"
                     android:textSize="30sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -52,11 +54,11 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ajhegil Espiritu"
-                    android:textAlignment="center"
-                    style="@style/text"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="40dp"
+                    android:textColor="@color/white"
+                    android:text="Ajhegil Espiritu"
+                    android:textAlignment="center"
                     android:textSize="26sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -66,21 +68,21 @@
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/text"
-                    app:layout_constraintTop_toBottomOf="@id/textView2"
+                    android:textColor="@color/white"
+                    android:text="hana_th@gmail.com"
                     android:textAlignment="center"
-                    android:text="hana_th@gmail.com" />
+                    app:layout_constraintTop_toBottomOf="@id/textView2" />
 
                 <Button
                     android:id="@+id/button1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="130dp"
-                    android:layout_marginEnd="120dp"
                     android:layout_marginTop="15dp"
+                    android:layout_marginEnd="120dp"
+                    android:background="@drawable/purple_background"
                     android:text="Update Profile"
                     android:textStyle="bold"
-                    android:backgroundTint="@color/black"
                     app:layout_constraintTop_toBottomOf="@id/textView3" />
 
 
@@ -90,7 +92,7 @@
                     android:layout_height="60dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:background="@drawable/background_oval_1"
+                    android:background="@drawable/background_ovall"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -102,7 +104,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/back" />
+                        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -118,8 +120,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="16dp">
 
                 <ImageView
@@ -137,9 +139,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:text="Notification"
-                    android:textStyle="bold"
-                    style="@style/text"
                     android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView11"
                     app:layout_constraintStart_toEndOf="@+id/imageView11"
                     app:layout_constraintTop_toTopOf="@+id/imageView11" />
@@ -154,52 +156,12 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/mode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp">
-
-                <ImageView
-                    android:id="@+id/modee"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_baseline_dark_mode_24" />
-
-                <TextView
-                    android:id="@+id/dark_mode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:text="Dark Mode"
-                    android:textStyle="bold"
-                    style="@style/text"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/modee"
-                    app:layout_constraintStart_toEndOf="@+id/modee"
-                    app:layout_constraintTop_toTopOf="@+id/modee" />
-
-                <Switch
-                    android:id="@+id/switchh"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/black"
-                android:layout_marginVertical="8dp"/>
+                android:layout_marginVertical="8dp"
+                android:background="@color/white" />
 
             <!-- Calendar -->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -207,8 +169,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="16dp">
 
                 <ImageView
@@ -226,7 +188,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:text="Calendar"
-                    style="@style/text"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView21"
@@ -249,8 +211,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="16dp">
 
                 <ImageView
@@ -268,7 +230,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:text="Gallery"
-                    style="@style/text"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView31"
@@ -291,8 +253,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="16dp">
 
                 <ImageView
@@ -310,7 +272,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:text="My Journal"
-                    style="@style/text"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView41"
@@ -332,8 +294,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="16dp">
 
                 <ImageView
@@ -351,7 +313,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:text="Rate App"
-                    style="@style/text"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/star"
@@ -363,8 +325,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/black"
-                android:layout_marginVertical="8dp"/>
+                android:layout_marginVertical="8dp"
+                android:background="@color/white" />
 
             <!-- Share -->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -372,8 +334,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="16dp">
 
                 <ImageView
@@ -391,7 +353,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:text="Share"
-                    style="@style/text"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView51"
@@ -413,8 +375,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="16dp">
 
                 <ImageView
@@ -432,7 +394,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:text="Contact"
-                    style="@style/text"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/phone"
@@ -450,14 +412,13 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="16dp">
 
                 <ImageView
@@ -475,7 +436,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:text="Clear Cache"
-                    style="@style/text"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/cachee"
@@ -497,8 +458,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="16dp">
 
                 <ImageView
@@ -516,7 +477,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:text="Clear Storage"
-                    style="@style/text"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/storagee"
@@ -536,8 +497,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/black"
-                android:layout_marginVertical="8dp"/>
+                android:layout_marginVertical="8dp"
+                android:background="@color/white" />
 
             <!-- Logout -->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -545,8 +506,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="16dp">
 
                 <ImageView
@@ -564,7 +525,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:text="Logout"
-                    style="@style/text"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView61"

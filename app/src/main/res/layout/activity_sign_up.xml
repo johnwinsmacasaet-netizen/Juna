@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/rbg"
+    android:background="@drawable/purple_background"
     tools:context=".SignUp">
 
     <ScrollView
@@ -28,7 +28,7 @@
                 android:textStyle="bold"
                 android:layout_marginTop="65dp"
                 android:textSize="40sp"
-                android:textColor="#4071b2"
+                android:textColor="#fff"
                 android:text="Create\nAccount" />
 
             <EditText
@@ -40,11 +40,11 @@
                 android:layout_marginEnd="32dp"
                 android:layout_marginTop="36dp"
                 android:background="@drawable/edittext_background1"
-                android:drawableStart="@drawable/user"
+                android:drawableStart="@drawable/ic_baseline_account_circle_25"
                 android:drawablePadding="16dp"
                 android:padding="8dp"
                 android:hint="UserName"
-                android:textColorHint="#4071b2"
+                android:textColorHint="#fff"
                 android:textStyle="bold"
                 android:layout_marginStart="32dp"/>
 
@@ -61,7 +61,7 @@
                 android:drawablePadding="16dp"
                 android:padding="8dp"
                 android:hint="Email"
-                android:textColorHint="#4071b2"
+                android:textColorHint="#fff"
                 android:textStyle="bold"
                 android:layout_marginStart="32dp"/>
 
@@ -78,7 +78,7 @@
                 android:drawablePadding="16dp"
                 android:padding="8dp"
                 android:hint="Password"
-                android:textColorHint="#4071b2"
+                android:textColorHint="#fff"
                 android:textStyle="bold"
                 android:layout_marginStart="32dp"/>
 
@@ -95,7 +95,7 @@
                 android:drawablePadding="16dp"
                 android:padding="8dp"
                 android:hint="Re-Password"
-                android:textColorHint="#4071b2"
+                android:textColorHint="#fff"
                 android:textStyle="bold"
                 android:layout_marginStart="32dp"/>
 
@@ -104,7 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Agree to the Terms and Conditions"
-                android:textColor="#4071b2"
+                android:textColor="#fff"
                 android:padding="16dp"
                 android:textStyle="bold"
                 android:layout_marginStart="42dp"

@@ -41,9 +41,7 @@ public class SignUp extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         // Initialize views
-        terms = findViewById(R.id.terms);
-        up = findViewById(R.id.up);
-        name = findViewById(R.id.name);
+
         fname = findViewById(R.id.fname);
         email = findViewById(R.id.email);
         pass = findViewById(R.id.pass);

@@ -2,12 +2,14 @@ package com.example.journal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,8 +21,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.DocumentSnapshot;
 
 public class MainActivity extends AppCompatActivity {
-
-    Button signup, loginbutton;
+    TextView signup;
+    ConstraintLayout loginbutton;
     EditText user, password;
 
     FirebaseAuth mAuth;
@@ -36,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
 
-        signup = findViewById(R.id.signup);
-        loginbutton = findViewById(R.id.loginbutton);
+        TextView signup = findViewById(R.id.signup);
+        ConstraintLayout loginbutton = findViewById(R.id.loginbutton);
         user = findViewById(R.id.user);
         password = findViewById(R.id.password);
 

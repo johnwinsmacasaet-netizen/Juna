@@ -12,6 +12,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="motionEasingStandard">@android:interpolator/fast_out_slow_in</item>
+        <item name="motionEasingDecelerated">@android:interpolator/fast_out_linear_in</item>
+        <item name="motionEasingAccelerated">@android:interpolator/linear_out_slow_in</item>
     </style>
     <!-- dark mode -->
     <style name="Screen">

@@ -1,4 +1,4 @@
-package com.example.journal;
+/*package com.example.journal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -46,3 +46,5 @@ public class changeprofile extends AppCompatActivity {
 
     }
 }
+
+ */

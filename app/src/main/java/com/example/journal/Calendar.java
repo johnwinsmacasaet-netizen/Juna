@@ -58,6 +58,16 @@ public class Calendar extends AppCompatActivity implements CalendarAdapter.OnIte
         selectedDate = LocalDate.now();
         setMonthView();
     }
+    public void newEventAction(View view) {
+        // Handle your event creation here
+        Toast.makeText(this, "New Event Clicked", Toast.LENGTH_SHORT).show();
+        // For example, show a dialog or navigate to a new screen
+    }
+    public void previousWeekAction(View view) {
+        // Your code for navigating to the previous week (or month, depending on your logic)
+        selectedDate = selectedDate.minusMonths(1);  // Adjust this logic if you want to change months instead
+        setMonthView();  // Refresh the calendar view
+    }
 
     private void initWidgets() {
         calendarRecyclerView = findViewById(R.id.calendarRecyclerView);
@@ -102,8 +112,11 @@ public class Calendar extends AppCompatActivity implements CalendarAdapter.OnIte
         setMonthView();
     }
 
-    public void nextMonthAction(View view) {
+    public void nextWeekAction(View view) {
+        // Increase the month by 1
         selectedDate = selectedDate.plusMonths(1);
+
+        // Update the UI to reflect the new month
         setMonthView();
     }
 

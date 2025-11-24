@@ -68,7 +68,7 @@ public class home extends AppCompatActivity {
         });
 
         loggbutton.setOnClickListener(v -> {
-            Intent intent = new Intent(home.this, tracker.class);
+            Intent intent = new Intent(home.this, log.class);
             startActivity(intent);
         });
 

@@ -14,9 +14,17 @@ import java.util.List;
 public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalViewHolder> {
 
     private List<JournalEntry> journalList;
+    private OnJournalClickListener listener;
 
-    public JournalAdapter(List<JournalEntry> journalList) {
+    // Interface for click events
+    public interface OnJournalClickListener {
+        void onJournalClick(JournalEntry entry);
+    }
+
+    // Updated constructor
+    public JournalAdapter(List<JournalEntry> journalList, OnJournalClickListener listener) {
         this.journalList = journalList;
+        this.listener = listener;
     }
 
     @NonNull
@@ -32,19 +40,26 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
         JournalEntry entry = journalList.get(position);
         holder.title.setText(entry.getTitle());
 
-        // Show only short preview of note
+        // Keep your preview logic
         String preview = entry.getNote();
         if (preview.length() > 50) {
             preview = preview.substring(0, 50) + "...";
         }
         holder.note.setText(preview);
 
-        // Mood formatting
+        // Mood formatting (your logic unchanged)
         String mood = capitalizeFirst(entry.getMood());
         String emoji = getEmojiForMood(mood);
 
         holder.mood.setText(mood + " " + emoji);
         holder.mood.setTextColor(getColorForMood(mood));
+
+        // Make the whole card clickable
+        holder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onJournalClick(entry);
+            }
+        });
     }
 
     @Override

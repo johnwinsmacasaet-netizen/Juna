@@ -7,10 +7,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Profile extends AppCompatActivity {
 
+    Button cprofile;
     androidx.constraintlayout.widget.ConstraintLayout notif, calendar, gallery, journal, share, logout;
     androidx.constraintlayout.widget.ConstraintLayout constraintLayout;
     final Context context = this;
@@ -19,6 +22,21 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        TextView nameView = findViewById(R.id.textView2);
+        TextView emailView = findViewById(R.id.textView3);
+
+// Load saved data
+        String savedUsername = getSharedPreferences("UserData", MODE_PRIVATE)
+                .getString("loggedUsername", "User");
+
+        String savedEmail = getSharedPreferences("UserData", MODE_PRIVATE)
+                .getString("loggedEmail", "email@example.com");
+
+// Set them
+        nameView.setText(savedUsername);
+        emailView.setText(savedEmail);
+
 
         // Check if ActionBar is available before calling hide()
         if (getSupportActionBar() != null) {
@@ -32,7 +50,15 @@ public class Profile extends AppCompatActivity {
         journal = findViewById(R.id.journal);
         share = findViewById(R.id.share);
         logout = findViewById(R.id.logout);
+        cprofile = findViewById(R.id.button1);
 
+        cprofile.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Profile.this, changeprofile.class);
+                startActivity(intent);
+            }
+        }));
         constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

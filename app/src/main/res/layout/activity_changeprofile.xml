@@ -11,7 +11,8 @@
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -227,10 +228,10 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/facebook"
+        android:id="@+id/upd"
         style="@android:style/Widget.Button"
         android:layout_width="200dp"
-        android:layout_height="55dp"
+        android:layout_height="75dp"
         android:layout_weight="0.5"
         android:background="@drawable/edittext_background"
         android:padding="16dp"

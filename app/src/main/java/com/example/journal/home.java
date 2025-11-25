@@ -52,15 +52,22 @@ public class home extends AppCompatActivity {
         cartBtn = findViewById(R.id.cartBtn);
         settingbutton = findViewById(R.id.settingbutton);
 
-       /* imageView8.setOnClickListener(v -> {
-            Intent intent = new Intent(home.this, .class);
-            startActivity(intent);
-        });*/
 
-        /*textView2.setOnClickListener(v -> {
+        String loggedUser = getSharedPreferences("UserData", MODE_PRIVATE)
+                .getString("loggedUsername", "User");
+
+// Update UI
+        textView2.setText("Hi " + loggedUser + "!");
+
+       imageView8.setOnClickListener(v -> {
             Intent intent = new Intent(home.this, Profile.class);
             startActivity(intent);
-        });*/
+        });
+
+        textView2.setOnClickListener(v -> {
+            Intent intent = new Intent(home.this, Profile.class);
+            startActivity(intent);
+        });
 
         homebutton.setOnClickListener(v -> {
             Intent intent = new Intent(home.this, home.class);
@@ -88,7 +95,15 @@ public class home extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         journalList = new ArrayList<>();
-        adapter = new JournalAdapter(journalList);
+        adapter = new JournalAdapter(journalList, entry -> {
+            Intent intent = new Intent(home.this, JournalViewActivity.class);
+            intent.putExtra("title", entry.getTitle());
+            intent.putExtra("note", entry.getNote());
+            intent.putExtra("mood", entry.getMood());
+
+            startActivity(intent);
+        });
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
         // --- Firebase user-specific reference ---

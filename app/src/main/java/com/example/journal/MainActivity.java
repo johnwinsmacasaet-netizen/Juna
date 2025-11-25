@@ -81,8 +81,16 @@ public class MainActivity extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<AuthResult> task) {
                                             if (task.isSuccessful()) {
+
+                                                getSharedPreferences("UserData", MODE_PRIVATE)
+                                                        .edit()
+                                                        .putString("loggedUsername", username)
+                                                        .putString("loggedEmail", email)
+                                                        .apply();
+
                                                 Toast.makeText(MainActivity.this, "Logged in successfully!", Toast.LENGTH_LONG).show();
                                                 Intent intent = new Intent(MainActivity.this, home.class);
+                                                intent.putExtra("username", username);
                                                 startActivity(intent);
                                                 finish();
                                             } else {

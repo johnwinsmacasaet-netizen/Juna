@@ -17,10 +17,13 @@ public class JournalEntry {
     }
 
     // 🔹 Constructor with mood (for API usage)
-    public JournalEntry(String title, String note, String mood) {
+    public JournalEntry(String title, String note, String mood, String id) {
         this.title = title;
         this.note = note;
         this.mood = mood;
+    }
+
+    public JournalEntry(String title, String note, String mood) {
     }
 
     // 🔹 Getters and setters
@@ -47,4 +50,5 @@ public class JournalEntry {
     public void setMood(String mood) {
         this.mood = mood;
     }
+
 }
